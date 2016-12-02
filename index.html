@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/materialize.min.css">
+
+</head>
+<body>
+    <div class="row grey darken-4">
+        <div class="col s8">
+            <div id="gameDiv"></div>
+        </div>
+        <div class="col s4">
+            <ul class="collapsible" data-collapsible="accordion">
+                <li class="grey darken-3" open>
+                    <div class="collapsible-header active">Map configuration</div>
+                    <div class="collapsible-body">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="plain_per" type="number" class="validate" min=0 max=100 value="0">
+                                <label for="plain_per">% plain</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input id="water_per" type="number" class="validate" min=0 max=100 value="0">
+                                <label for="water_per">% water</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input id="mountain_per" type="number" class="validate" min=0 max=100 value="0">
+                                <label for="mountain_per">% mountain</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input id="ravine_per" type="number" class="validate" min=0 max=100 value="0">
+                                <label for="ravine_per">% ravine</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input id="wall_per" type="number" class="validate" min=0 max=100 value="0">
+                                <label for="wall_per">% wall</label>
+                            </div>
+                            <div class="input-field col s6 center">
+                                <button class="btn" id="randomize_map">
+                                    Generate
+                                </button>
+                            </div>
+                            <div class="input-field col s6 center">
+                                <button class="btn" id="reset_map">
+                                    Reset
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="grey darken-3">
+                    <div class="collapsible-header">Algorithms</div>
+                    <div class="collapsible-body">
+                        <div class="row" style="">
+                            <div class="input-field col s12">
+                                <input id="iterations" type="number" class="validate" min=0>
+                                <label for="first_name">Iterations</label>
+                            </div>
+                            <div class="input-field col s12 center">
+                                <button class="btn" id="start_training">
+                                    Start training
+                                </button>
+                            </div>
+                            <div class="input-field col s12 center">
+                                <button class="btn" id="start_greedy">
+                                    Start greedy
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="/src/js/jquery-3.1.1.js"></script>
+    <script src="/src/js/materialize.min.js"></script>
+    <script src="/src/js/phaser.js"></script>
+    <script src="/src/map.js"></script>
+    <script src="/src/graph.js"></script>
+    <script src="/src/connect.js"></script>
+</body>
+</html>
